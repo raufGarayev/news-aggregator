@@ -1,0 +1,41 @@
+@import '../../variables'
+
+.news-container
+    width: 80%
+    margin: 40px 0
+    min-height: 80vh
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 20px
+    .news
+        width: 100%
+        
+    .infinite-scroll-component__outerDiv 
+        width: 80%
+        height: 100%
+    .nothing
+        width: 300%
+        @include centering
+        align-items: flex-start
+        p
+            font-size: 40px
+
+.sourceLink
+    border-radius: 6px
+    &:hover
+        border: 1px solid #4096ff
+
+@media ( min-width: 1500px)
+    .news-container
+        grid-template-columns: repeat(4, 1fr) !important
+
+@media ( max-width: 1200px)
+    .news-container
+        grid-template-columns: repeat(2, 1fr) !important
+
+@media ( max-width: 760px)
+    .news-container
+        grid-template-columns: repeat(1, 1fr) !important
+        width: 90%
+        margin: 60px 0
+        

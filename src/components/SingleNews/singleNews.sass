@@ -1,0 +1,43 @@
+@import '../../variables'
+    
+.newsItem
+    height: 300px
+    background: #fff
+    padding: 15px
+    cursor: pointer
+    &:hover
+        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+    &-img
+        width: 100%
+        height: 50%
+        img
+            width: 100%
+            height: 100%
+    &-info
+        height: 50%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &_titles
+            margin-top: 10px
+            height: 90%
+            p
+                margin-top: 12px
+                text-overflow: ellipsis
+        &_bottom
+            display: flex
+            .timer
+                border-right: 1px solid #dbdbdb
+                padding-right: 10px
+                color: #5a5a5a
+                display: flex
+                align-items: center
+                gap: 3px
+                &-icon
+                    font-size: 1rem
+            span:nth-child(2)
+                padding-left: 10px
+
+@media (max-width: 750px)
+    .newsItem
+        width: 100%

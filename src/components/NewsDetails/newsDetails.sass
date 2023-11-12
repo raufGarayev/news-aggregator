@@ -1,0 +1,46 @@
+@import '../../variables'
+
+.newsDetails
+    height: 500px
+    display: flex
+    overflow-y: auto
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    &::-webkit-scrollbar 
+        width: 5px
+    &::-webkit-scrollbar-track 
+        box-shadow: inset 0 0 5px grey
+        border-radius: 10px
+    &::-webkit-scrollbar-thumb 
+        background: $mainColor
+        border-radius: 10px
+    &::-webkit-scrollbar-thumb:hover 
+        background: $mainColor
+    &-top
+        height: 80%
+    &-img
+        width: 100%
+        height: 80%
+        img
+            width: 100%
+            height: 100%
+    &-content
+        margin-top: 20px
+        p
+            margin-top: 10px
+
+@media (max-width: 768px)
+    .newsDetails
+        height: 100%
+        &-top
+            height: 50%
+        &-img
+            height: 50%
+        &-content
+            margin-top: 0
+            p
+                margin-top: 0
+
+
+

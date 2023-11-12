@@ -1,0 +1,24 @@
+@import '../../variables'
+    
+.headerProfile
+    &-loginBtn
+        padding: 10px 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #0b3249
+        font-size: 1rem
+        font-weight: 400
+    .profile
+        color: #fff
+        @include centering
+        gap: 7px
+        cursor: pointer
+        width: 102px
+        span
+            text-transform: capitalize
+            font-size: 1rem
+    
+@media (max-width: 750px)
+    .headerProfile
+        display: none

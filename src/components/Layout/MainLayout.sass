@@ -1,0 +1,35 @@
+@import '../../variables'
+    
+.header
+    position: sticky
+    top: 0
+    z-index: 9
+    background-color: #0b3249
+    height: 90px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-burger
+        display: none
+    &-logo
+        display: block
+        height: 53px
+        width: 147px
+        color: #187da1
+        svg
+            fill: #fff
+
+.form-info
+    @include centering
+    flex-direction: column
+    margin-bottom: 20px
+    span
+        font-weight: 700
+
+@media (max-width: 750px)
+    .ant-layout-header
+        padding: 0 15px
+    .header-burger
+        display: block
+        font-size: 1.2rem
+        color: #fff
