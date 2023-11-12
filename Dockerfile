@@ -12,4 +12,4 @@ COPY . ./
 
 RUN npm run build
 
-CMD ["npx", "serve", "build/", "--single"]
+CMD ["npx", "serve", "dist/", "--single"]
