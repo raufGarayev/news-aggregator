@@ -1,27 +1,22 @@
-# React + TypeScript + Vite
+# News Aggregator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Important notes (Docker documentation is down)
 
-Currently, two official plugins are available:
+- APIs that are used: NewsAPI.org, The Guardian, New York Times. Thanks for providing these sources.
+- Errors appeared by news apis can be due to api limitation. (Mostly NewsAPI)
+- Even if application has single page, there is still page directory. Because i think that's a standart structure of react application.
+- Login credentials are static and user preferences is saved in local storage. I could make a nestjs backend for it but as it is mentioned in task it is a front-end project so i didn't see any necessity for it.
+- Reason of using ContextAPI while there is already Redux: I am using ContextAPI in my applications mostly for saving user data. Since we always should load the user data more faster than anything. Even if user data is static and local here, i just wanted to show the best approach for a real world application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Docker documentation
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+I provided Dockerfile and docker-compose.yaml files just to make your work easier. Run command: 
+```docker
+docker-compose up --build
 ```
+and you are good to go!
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+If it is required to change docker port or image name you can do it in docker-compose.yaml file.
+
+Default ports: 3000:3000
+Default image name: news
